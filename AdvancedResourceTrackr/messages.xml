@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MessageCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="messagecollection.xsd">
+
+        <Plugin>
+                <ShortDescription>FindBugs Plugin to detect unclosed resource within an application</ShortDescription>
+                <Details>Provides detectors for initialised resources within the method which are not closed</Details>
+        </Plugin>
+        <Detector class="edu.umd.cs.findbugs.detect.ResourceLeakDetector">
+                <Details>
+Finds unclosed resources/streams which would lead to resource leak
+                </Details>
+
+        </Detector>
+        <BugPattern type="RESOURCE_LEAK">
+                <ShortDescription>Method may not have closed the resource</ShortDescription>
+                <LongDescription>{1} may fail to close {2.excludingPackage}</LongDescription>
+                <Details>
+<![CDATA[
+<p>Method creates the resource like Database connection/File streams but does not appears to close it before method exit</p>
+]]>
+                </Details>
+        </BugPattern>
+        <BugCode abbrev="UNCLOSED_RESOURCE">Method may not have closed the resource</BugCode>
+</MessageCollection>

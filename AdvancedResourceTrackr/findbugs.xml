@@ -1,0 +1,9 @@
+<FindbugsPlugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="findbugsplugin.xsd" 
+        pluginid="edu.umd.cs.findbugs.detect.ResourceLeakDetector"
+        provider="FindBugs Tutorial" 
+        website="http://findbugs.sourceforge.net">
+
+        <Detector class="edu.umd.cs.findbugs.detect.ResourceLeakDetector" reports="RESOURCE_LEAK" />
+        <BugPattern type="RESOURCE_LEAK" abbrev="UNCLOSED_RESOURCE" category="CORRECTNESS"/>
+</FindbugsPlugin>
